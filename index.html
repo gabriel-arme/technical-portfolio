@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juan Gabriel Arroyo Mestanza | Technical Portfolio</title>
+
+    <style>
+        :root {
+            --bg: #f7f9fb;
+            --card: #ffffff;
+            --text: #1f2937;
+            --muted: #6b7280;
+            --accent: #0f766e;
+            --border: #dbe4ea;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f766e, #155e75);
+            color: white;
+            padding: 56px 24px 40px;
+        }
+
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            margin: 0 0 10px;
+            font-size: 2.2rem;
+        }
+
+        .subtitle {
+            margin: 0;
+            font-size: 1.05rem;
+            max-width: 760px;
+            opacity: 0.95;
+        }
+
+        nav {
+            margin-top: 22px;
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            opacity: 0.95;
+        }
+
+        .flags {
+            margin-left: auto;
+            display: flex;
+            gap: 10px;
+            font-size: 1.2rem;
+        }
+
+        .flags button {
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            background: rgba(255, 255, 255, 0.12);
+            color: white;
+            border-radius: 999px;
+            padding: 6px 9px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        main {
+            padding: 36px 0 60px;
+        }
+
+        section {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 22px;
+            box-shadow: 0 6px 18px rgba(15, 23, 42, 0.04);
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 1.35rem;
+            color: #0b4f4a;
+        }
+
+        p {
+            margin: 0 0 14px;
+            text-align: left;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+        }
+
+        .card {
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 18px;
+            background: #fbfcfd;
+        }
+
+        .card h3 {
+            margin: 0 0 8px;
+            font-size: 1.02rem;
+        }
+
+        .muted {
+            color: var(--muted);
+        }
+
+        ul {
+            margin: 10px 0 0 18px;
+            padding: 0;
+        }
+
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+            justify-content: center;
+        }
+
+        .tag {
+            background: #e6f6f4;
+            color: #0f5c56;
+            border: 1px solid #b9e7e2;
+            padding: 8px 12px;
+            border-radius: 999px;
+            font-size: 0.92rem;
+        }
+
+        .links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 16px;
+        }
+
+        .button-link {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            background: var(--accent);
+            padding: 9px 13px;
+            border-radius: 10px;
+            font-size: 0.92rem;
+            font-weight: bold;
+        }
+
+        .button-link.secondary {
+            color: var(--accent);
+            background: #e6f6f4;
+            border: 1px solid #b9e7e2;
+        }
+
+        footer {
+            padding: 28px 20px 48px;
+            color: var(--muted);
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Juan Gabriel Arroyo Mestanza</h1>
+
+            <p class="subtitle" data-i18n="subtitle">
+                Physicist engineer working at the intersection of wave-based measurement systems,
+                signal analysis, scientific computing and custom application development.
+            </p>
+
+            <nav>
+                <a href="#about" data-i18n="navAbout">About</a>
+                <a href="#interests" data-i18n="navInterests">Technical Interests</a>
+                <a href="#projects" data-i18n="navProjects">Projects</a>
+                <a href="#notes" data-i18n="navNotes">Notes</a>
+                <a href="#contact" data-i18n="navContact">Contact</a>
+
+                <div class="flags">
+                    <button type="button" onclick="setLanguage('en')">🇬🇧</button>
+                    <button type="button" onclick="setLanguage('de')">🇩🇪</button>
+                    <button type="button" onclick="setLanguage('es')">🇪🇸</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+
+            <section id="about">
+                <h2 data-i18n="aboutTitle">About</h2>
+
+                <p data-i18n="aboutP1">
+                    I am a physicist engineer with experience in wave-based measurement systems,
+                    signal analysis and scientific computing. My work has focused on the evaluation
+                    of real ultrasonic inspection data, the interpretation of signal quality in
+                    operational environments and the development of custom tools to support
+                    technical analysis and process improvement.
+                </p>
+
+                <p data-i18n="aboutP2">
+                    I use programming not only for scientific analysis, but also for building
+                    practical engineering applications in Python and C++. For me, software is a
+                    way to understand physical systems, automate technical workflows and make
+                    complex analysis more accessible and useful in real engineering contexts.
+                </p>
+            </section>
+
+            <section id="interests">
+                <h2 data-i18n="interestsTitle">Technical Interests</h2>
+
+                <div class="tag-list">
+                    <span class="tag" data-i18n="tag1">Wave-based measurement systems</span>
+                    <span class="tag" data-i18n="tag2">Signal processing</span>
+                    <span class="tag" data-i18n="tag3">Ultrasonic NDT</span>
+                    <span class="tag" data-i18n="tag4">Ultrasound imaging</span>
+                    <span class="tag" data-i18n="tag5">Scientific computing</span>
+                    <span class="tag">Python &amp; C++</span>
+                    <span class="tag" data-i18n="tag7">Custom technical application development</span>
+                </div>
+            </section>
+
+            <section id="projects">
+                <h2 data-i18n="projectsTitle">Projects</h2>
+
+                <div class="grid">
+
+                    <div class="card">
+                        <h3 data-i18n="project1Title">Ultrasound Imaging: From Signal to Image</h3>
+
+                        <p class="muted" data-i18n="project1Desc">
+                            Python/PyQt-based technical application for generating, visualizing and
+                            processing ultrasound-like signals from point reflectors.
+                        </p>
+
+                        <ul>
+                            <li data-i18n="project1Li1">RF A-scan generation from pulse models and reflector parameters
+                            </li>
+                            <li data-i18n="project1Li2">Interactive visualization of time-domain signals and
+                                depth-related echoes</li>
+                            <li data-i18n="project1Li3">Processing workflow toward B-scan representation and
+                                imaging-related metrics</li>
+                        </ul>
+
+                        <div class="links">
+                            <a class="button-link" href="https://github.com/gabriel-arme/from-signal-to-image"
+                                data-i18n="repoLink">Repository</a>
+                            <a class="button-link secondary" href="projects/from-signal-to-image.html"
+                                data-i18n="projectNotesLink">Project notes</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 data-i18n="project2Title">Wave Propagation Simulation</h3>
+
+                        <p class="muted" data-i18n="project2Desc">
+                            Exploratory simulation environment to visualize how a wave propagates,
+                            interacts with simplified reflectors and returns to a sensor.
+                        </p>
+
+                        <ul>
+                            <li data-i18n="project2Li1">Conceptual model of source, medium, reflectors and receiver</li>
+                            <li data-i18n="project2Li2">Visualization of wave travel, reflection and return paths</li>
+                            <li data-i18n="project2Li3">Future direction: finite-difference simulation and
+                                parameter-controlled geometries</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="notes">
+                <h2 data-i18n="notesTitle">Technical Notes</h2>
+
+                <div class="grid">
+
+                    <div class="card">
+                        <h3 data-i18n="note1Title">Physical Parameters in Imaging Systems</h3>
+                        <p class="muted" data-i18n="note1Desc">
+                            Coming soon: notes on how SNR, bandwidth, axial resolution, attenuation and depth affect
+                            signal quality and image formation in wave-based imaging systems.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3 data-i18n="note2Title">From Signal to Image: Project Summary</h3>
+                        <p class="muted" data-i18n="note2Desc">
+                            Technical overview of how simulated echoes are generated, processed and progressively
+                            transformed into an imaging-oriented representation.
+                        </p>
+
+                        <div class="links">
+                            <a class="button-link secondary" href="projects/from-signal-to-image.html"
+                                data-i18n="projectNotesLink2">Read note</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 data-i18n="note3Title">NDT and Ultrasound Imaging</h3>
+                        <p class="muted" data-i18n="note3Desc">
+                            Coming soon: notes on the physical connection between ultrasonic NDT and ultrasound imaging,
+                            including echoes, reflectors, attenuation, signal quality and system limitations.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2 data-i18n="contactTitle">Contact</h2>
+
+                <p data-i18n="contactText">
+                    If you are interested in wave-based systems, imaging applications or custom technical software, feel
+                    free to reach out.
+                </p>
+
+                <p><strong>Email:</strong> your-email@example.com</p>
+                <p><strong>LinkedIn:</strong> Your LinkedIn profile</p>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container" data-i18n="footerText">
+            Technical portfolio in progress.
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            en: {
+                subtitle: "Physicist engineer working at the intersection of wave-based measurement systems, signal analysis, scientific computing and custom application development.",
+                navAbout: "About",
+                navInterests: "Technical Interests",
+                navProjects: "Projects",
+                navNotes: "Notes",
+                navContact: "Contact",
+                aboutTitle: "About",
+                aboutP1: "I am a physicist engineer with experience in wave-based measurement systems, signal analysis and scientific computing. My work has focused on the evaluation of real ultrasonic inspection data, the interpretation of signal quality in operational environments and the development of custom tools to support technical analysis and process improvement.",
+                aboutP2: "I use programming not only for scientific analysis, but also for building practical engineering applications in Python and C++. For me, software is a way to understand physical systems, automate technical workflows and make complex analysis more accessible and useful in real engineering contexts.",
+                interestsTitle: "Technical Interests",
+                tag1: "Wave-based measurement systems",
+                tag2: "Signal processing",
+                tag3: "Ultrasonic NDT",
+                tag4: "Ultrasound imaging",
+                tag5: "Scientific computing",
+                tag7: "Custom technical application development",
+                projectsTitle: "Projects",
+                project1Title: "Ultrasound Imaging: From Signal to Image",
+                project1Desc: "Python/PyQt-based technical application for generating, visualizing and processing ultrasound-like signals from point reflectors.",
+                project1Li1: "RF A-scan generation from pulse models and reflector parameters",
+                project1Li2: "Interactive visualization of time-domain signals and depth-related echoes",
+                project1Li3: "Processing workflow toward B-scan representation and imaging-related metrics",
+                repoLink: "Repository",
+                projectNotesLink: "Project notes",
+                projectNotesLink2: "Read note",
+                project2Title: "Wave Propagation Simulation",
+                project2Desc: "Exploratory simulation environment to visualize how a wave propagates, interacts with simplified reflectors and returns to a sensor.",
+                project2Li1: "Conceptual model of source, medium, reflectors and receiver",
+                project2Li2: "Visualization of wave travel, reflection and return paths",
+                project2Li3: "Future direction: finite-difference simulation and parameter-controlled geometries",
+                notesTitle: "Technical Notes",
+                note1Title: "Physical Parameters in Imaging Systems",
+                note1Desc: "Coming soon: notes on how SNR, bandwidth, axial resolution, attenuation and depth affect signal quality and image formation in wave-based imaging systems.",
+                note2Title: "From Signal to Image: Project Summary",
+                note2Desc: "Technical overview of how simulated echoes are generated, processed and progressively transformed into an imaging-oriented representation.",
+                note3Title: "NDT and Ultrasound Imaging",
+                note3Desc: "Coming soon: notes on the physical connection between ultrasonic NDT and ultrasound imaging, including echoes, reflectors, attenuation, signal quality and system limitations.",
+                contactTitle: "Contact",
+                contactText: "If you are interested in wave-based systems, imaging applications or custom technical software, feel free to reach out.",
+                footerText: "Technical portfolio in progress."
+            },
+
+            de: {
+                subtitle: "Ingenieur Physik an der Schnittstelle von wellenbasierten Messsystemen, Signalanalyse, wissenschaftlichem Rechnen und kundenspezifischer Anwendungsentwicklung.",
+                navAbout: "Über mich",
+                navInterests: "Technische Interessen",
+                navProjects: "Projekte",
+                navNotes: "Notizen",
+                navContact: "Kontakt",
+                aboutTitle: "Über mich",
+                aboutP1: "Ich bin Ingenieur Physik mit Erfahrung in wellenbasierten Messsystemen, Signalanalyse und wissenschaftlichem Rechnen. Mein Schwerpunkt liegt auf der Auswertung realer Ultraschall-Inspektionsdaten, der Interpretation von Signalqualität in operativen Umgebungen und der Entwicklung eigener Werkzeuge zur Unterstützung technischer Analysen und Prozessverbesserungen.",
+                aboutP2: "Programmierung nutze ich nicht nur für wissenschaftliche Analysen, sondern auch für praktische technische Anwendungen in Python und C++. Für mich ist Software ein Werkzeug, um physikalische Systeme besser zu verstehen, technische Arbeitsabläufe zu automatisieren und komplexe Analysen in realen Ingenieurkontexten nutzbar zu machen.",
+                interestsTitle: "Technische Interessen",
+                tag1: "Wellenbasierte Messsysteme",
+                tag2: "Signalverarbeitung",
+                tag3: "Ultraschall-NDT",
+                tag4: "Ultraschall-Bildgebung",
+                tag5: "Wissenschaftliches Rechnen",
+                tag7: "Kundenspezifische technische Anwendungsentwicklung",
+                projectsTitle: "Projekte",
+                project1Title: "Ultraschall-Bildgebung: vom Signal zum Bild",
+                project1Desc: "Technische Anwendung auf Basis von Python/PyQt zur Erzeugung, Visualisierung und Verarbeitung ultraschallähnlicher Signale von Punktreflektoren.",
+                project1Li1: "RF-A-Scan-Erzeugung aus Pulsmodellen und Reflektorparametern",
+                project1Li2: "Interaktive Visualisierung von Zeitsignalen und tiefenbezogenen Echos",
+                project1Li3: "Verarbeitungsworkflow in Richtung B-Scan-Darstellung und bildgebungsnaher Metriken",
+                repoLink: "Repository",
+                projectNotesLink: "Projektnotiz",
+                projectNotesLink2: "Notiz lesen",
+                project2Title: "Simulation der Wellenausbreitung",
+                project2Desc: "Explorative Simulationsumgebung zur Visualisierung, wie sich eine Welle ausbreitet, mit vereinfachten Reflektoren interagiert und zum Sensor zurückkehrt.",
+                project2Li1: "Konzeptionelles Modell von Quelle, Medium, Reflektoren und Empfänger",
+                project2Li2: "Visualisierung von Wellenausbreitung, Reflexion und Rücklaufwegen",
+                project2Li3: "Nächster Schritt: Finite-Differenzen-Simulation und parametrische Geometrien",
+                notesTitle: "Technische Notizen",
+                note1Title: "Physikalische Parameter in Bildgebungssystemen",
+                note1Desc: "Demnächst: Notizen dazu, wie SNR, Bandbreite, axiale Auflösung, Dämpfung und Tiefe die Signalqualität und Bildentstehung in wellenbasierten Bildgebungssystemen beeinflussen.",
+                note2Title: "From Signal to Image: Projektübersicht",
+                note2Desc: "Technischer Überblick darüber, wie simulierte Echos erzeugt, verarbeitet und schrittweise in eine bildgebungsorientierte Darstellung überführt werden.",
+                note3Title: "NDT und Ultraschall-Bildgebung",
+                note3Desc: "Demnächst: Notizen zur physikalischen Verbindung zwischen Ultraschall-NDT und Ultraschall-Bildgebung, einschließlich Echos, Reflektoren, Dämpfung, Signalqualität und Systemgrenzen.",
+                contactTitle: "Kontakt",
+                contactText: "Wenn Sie sich für wellenbasierte Systeme, Bildgebungsanwendungen oder kundenspezifische technische Software interessieren, freue ich mich über eine Nachricht.",
+                footerText: "Technisches Portfolio im Aufbau."
+            },
+
+            es: {
+                subtitle: "Ingeniero físico en la intersección entre sistemas de medición basados en ondas, análisis de señales, computación científica y desarrollo de aplicaciones personalizadas.",
+                navAbout: "Sobre mí",
+                navInterests: "Intereses técnicos",
+                navProjects: "Proyectos",
+                navNotes: "Notas",
+                navContact: "Contacto",
+                aboutTitle: "Sobre mí",
+                aboutP1: "Soy ingeniero físico con experiencia en sistemas de medición basados en ondas, análisis de señales y computación científica. Mi trabajo se ha centrado en la evaluación de datos reales de inspección ultrasónica, la interpretación de calidad de señal en entornos operativos y el desarrollo de herramientas propias para apoyar el análisis técnico y la mejora de procesos.",
+                aboutP2: "Uso la programación no solo para análisis científico, sino también para construir aplicaciones técnicas prácticas en Python y C++. Para mí, el software es una forma de entender sistemas físicos, automatizar flujos de trabajo técnicos y hacer que el análisis complejo sea más accesible y útil en contextos reales de ingeniería.",
+                interestsTitle: "Intereses técnicos",
+                tag1: "Sistemas de medición basados en ondas",
+                tag2: "Procesamiento de señales",
+                tag3: "Ultrasonido NDT",
+                tag4: "Imagen ultrasónica",
+                tag5: "Computación científica",
+                tag7: "Desarrollo de aplicaciones técnicas personalizadas",
+                projectsTitle: "Proyectos",
+                project1Title: "Imagen ultrasónica: de la señal a la imagen",
+                project1Desc: "Aplicación técnica basada en Python/PyQt para generar, visualizar y procesar señales tipo ultrasonido provenientes de reflectores puntuales.",
+                project1Li1: "Generación de RF A-scan usando modelos de pulso y parámetros de reflectores",
+                project1Li2: "Visualización interactiva de señales en el tiempo y ecos relacionados con profundidad",
+                project1Li3: "Flujo de procesamiento hacia representación B-scan y métricas relacionadas con imagen",
+                repoLink: "Repositorio",
+                projectNotesLink: "Nota del proyecto",
+                projectNotesLink2: "Leer nota",
+                project2Title: "Simulación de propagación de ondas",
+                project2Desc: "Entorno exploratorio de simulación para visualizar cómo una onda se propaga, interactúa con reflectores simplificados y retorna al sensor.",
+                project2Li1: "Modelo conceptual de fuente, medio, reflectores y receptor",
+                project2Li2: "Visualización del viaje de la onda, reflexión y trayectorias de retorno",
+                project2Li3: "Siguiente etapa: simulación por diferencias finitas y geometrías parametrizadas",
+                notesTitle: "Notas técnicas",
+                note1Title: "Parámetros físicos en sistemas de imagen",
+                note1Desc: "Próximamente: notas sobre cómo SNR, ancho de banda, resolución axial, atenuación y profundidad afectan la calidad de señal y la formación de imagen en sistemas basados en ondas.",
+                note2Title: "From Signal to Image: resumen del proyecto",
+                note2Desc: "Resumen técnico sobre cómo se generan ecos simulados, se procesan y se transforman progresivamente en una representación orientada a imagen.",
+                note3Title: "NDT e imagen ultrasónica",
+                note3Desc: "Próximamente: notas sobre la conexión física entre NDT ultrasónico e imagen ultrasónica, incluyendo ecos, reflectores, atenuación, calidad de señal y limitaciones del sistema.",
+                contactTitle: "Contacto",
+                contactText: "Si te interesan los sistemas basados en ondas, aplicaciones de imagen o software técnico personalizado, puedes contactarme.",
+                footerText: "Portafolio técnico en construcción."
+            }
+        };
+
+        function setLanguage(lang) {
+            const dictionary = translations[lang] || translations.en;
+            document.documentElement.lang = lang;
+
+            document.querySelectorAll("[data-i18n]").forEach((element) => {
+                const key = element.getAttribute("data-i18n");
+                if (dictionary[key]) {
+                    element.textContent = dictionary[key];
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>
