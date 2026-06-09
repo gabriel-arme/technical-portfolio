@@ -22,11 +22,11 @@ A Python/PyQt application developed to explore the transition from RF A-scan gen
 
 Juan Gabriel Arroyo Mestanza
 
-## Portfolio
+### Portfolio
 
 https://gabriel-arme.github.io/technical-portfolio/
 
-## Contact
+### Contact
 
 Email: gabriel.arme@outlook.com
 
